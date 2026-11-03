@@ -1,0 +1,6 @@
+# Per-book generated artifacts and dependency installs
+books/*/output/
+books/*/node_modules/
+books/*/dist/
+.pnpm-store/
+
