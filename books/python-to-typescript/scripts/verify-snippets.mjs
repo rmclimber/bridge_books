@@ -16,6 +16,16 @@ const checks = [
     source: "src/domain-modeling.ts",
     region: "summarizeTasks",
   },
+  {
+    manuscript: "manuscript/04-program-structure.md",
+    source: "src/task-presentation.ts",
+    region: "openTaskTitles",
+  },
+  {
+    manuscript: "manuscript/04-program-structure.md",
+    source: "src/task-presentation.ts",
+    region: "formatTasks",
+  },
 ];
 
 function normalize(text) {

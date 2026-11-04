@@ -2,8 +2,8 @@
 
 ## Current phase
 
-Three foundation slices are complete; the book is ready for modules, program
-structure, and `this`.
+Four foundation slices are complete; the book is ready for promises,
+asynchronous persistence, errors, and tests.
 
 ## Completed
 
@@ -24,17 +24,20 @@ structure, and `this`.
 - Completed the domain-modeling slice: discriminated unions, `Map`/`Set`,
   generic constraints, and static structural typing, with executable examples,
   Exercise 3, and a worked solution.
+- Completed the program-structure slice: Node ESM imports, focused module
+  functions and classes, and `this` callback behavior, with executable
+  examples, Exercise 4, and a worked solution.
 
 ## In progress
 
-- Planning the modules, functions/classes, `this`, and program-structure
-  vertical slice.
+- Planning the promises, asynchronous persistence, errors, and tests vertical
+  slice.
 
 ## Next priorities
 
-1. Implement the modules, functions/classes, `this`, and program-structure
-   slice.
-2. Begin linking the checked task-domain examples to the task-tracker capstone.
+1. Implement the promises, asynchronous persistence, errors, and tests slice.
+2. Begin linking the checked task-domain and program-structure examples to the
+   task-tracker capstone.
 3. Add the next slice's executable examples, exercises, solutions, and matrix
    evidence.
 
@@ -63,9 +66,9 @@ structure, and `this`.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 6 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 8 pages)
 - Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 3 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 10 Node tests)
-- Release status: unreleased; three foundation slices drafted
+  and 12 Node tests)
+- Release status: unreleased; four foundation slices drafted
 

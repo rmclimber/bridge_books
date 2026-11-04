@@ -12,6 +12,6 @@
 | P1 | Preserve caller types with generics | A helper may discard detail as a base class or `Any` | Generic constraints retain each structural caller type | New mechanism | `findById` test and Exercise 3 | Chapter 3: Domain modeling |
 | P1 | Use equality deliberately | Equality/truthiness are familiar | Prefer `===`; coercion and falsiness are consequential | False friend | Exercise 2 and identifier-equality test | Chapter 2: Values that look familiar |
 | P1 | Respect numeric limits | Integers are arbitrary precision | `number` is IEEE-754; `bigint` is separate | Operational difference | Exercise 2 and opaque-ID test | Chapter 2: Values that look familiar |
-| P1 | Organize a project | Imports are straightforward inclusion | ESM resolution and package metadata shape execution | Operational difference | Package-layout task | Slice 5 |
-| P1 | Avoid `this` callback failures | Instance methods retain their receiver | `this` depends on call site | New mechanism | Callback bug repair | Slice 5 |
+| P1 | Organize a project | Imports are straightforward inclusion | ESM resolution and package metadata shape execution | Operational difference | ESM module test and Exercise 4 | Chapter 4: Program structure |
+| P1 | Avoid `this` callback failures | Instance methods retain their receiver | `this` depends on call site | New mechanism | Formatter callback test and Exercise 4 | Chapter 4: Program structure |
 
