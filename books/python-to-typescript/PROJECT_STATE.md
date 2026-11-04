@@ -2,8 +2,8 @@
 
 ## Current phase
 
-Five foundation slices and capstone integration are complete; the book is ready
-for the exit assessment and production pass.
+The planned instructional slices are complete. The book is ready for external
+reader/practitioner review and release decisions.
 
 ## Completed
 
@@ -32,15 +32,18 @@ for the exit assessment and production pass.
   worked solution.
 - Completed capstone integration: framework-free task-ledger commands,
   acceptance tests, persisted task transitions, and a documented CLI surface.
+- Completed the exit assessment and production pass: independent extension
+  brief, scoring rubric, evaluator guide, and whole-book build verification.
 
 ## In progress
 
-- Planning the exit assessment and production pass.
+- No implementation slice is active.
 
 ## Next priorities
 
-1. Add the independent exit assessment and a worked evaluation rubric.
-2. Perform a whole-book integration and production pass.
+1. Obtain an experienced TypeScript practitioner review.
+2. Trial the exit assessment with experienced Python programmers new to
+   TypeScript and revise persistent misunderstandings.
 3. Decide whether HTML/ePub and the solutions workbook ship in the first release.
 
 ## Open decisions
@@ -68,9 +71,9 @@ for the exit assessment and production pass.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 12 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 4 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 13 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 5 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
   and 17 Node tests)
-- Release status: unreleased; five foundation slices and capstone drafted
+- Release status: unreleased; draft complete, external review pending
 

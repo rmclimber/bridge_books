@@ -16,7 +16,8 @@ $sources = @(
   "exercises/04-program-structure.md",
   "manuscript/05-async-persistence.md",
   "exercises/05-async-persistence.md",
-  "manuscript/06-capstone-integration.md"
+  "manuscript/06-capstone-integration.md",
+  "manuscript/07-exit-assessment.md"
 )
 pandoc $sources --metadata-file=metadata.yaml --from markdown --pdf-engine=pdflatex --output (Join-Path $outputDir "python-to-typescript.pdf")
 

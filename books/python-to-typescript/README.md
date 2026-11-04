@@ -5,8 +5,8 @@ strict TypeScript in a Node.js professional workflow.
 
 ## Status
 
-The repository foundation, five instructional slices, and the capstone
-integration are complete.
+The repository foundation, five instructional slices, capstone integration,
+and exit assessment are complete.
 The current material covers runtime boundaries; absence, equality, numeric
 limits, and mutation; domain modeling with unions, collections, generics, and
 structural typing; plus Node ESM modules, focused functions/classes, and
@@ -15,6 +15,8 @@ and tests.
 
 The `task-ledger` capstone integrates those modules behind `list`, `add`,
 and `complete` commands. See `capstone/README.md`.
+The independent final assessment and scoring rubric are in
+`assessments/exit-assessment.md`.
 
 ## Commands
 

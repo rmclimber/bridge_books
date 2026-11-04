@@ -16,4 +16,5 @@
 | P1 | Organize a project | Imports are straightforward inclusion | ESM resolution and package metadata shape execution | Operational difference | ESM module test and Exercise 4 | Chapter 4: Program structure |
 | P1 | Avoid `this` callback failures | Instance methods retain their receiver | `this` depends on call site | New mechanism | Formatter callback test and Exercise 4 | Chapter 4: Program structure |
 | P0 | Integrate a small typed Node program | A script can mix parsing, state, and I/O freely | Thin command layer composes typed modules and awaits observable persistence | Professional workflow | Task-ledger acceptance tests and capstone CLI | Chapter 6: Capstone integration |
+| P0 | Independently extend and assess a strict TypeScript program | Familiar syntax is enough to adapt a script | A safe change spans types, runtime migration, async errors, and tests | Independent problem solving | Exit assessment, rubric, and learner test evidence | Chapter 7: Exit assessment |
 
