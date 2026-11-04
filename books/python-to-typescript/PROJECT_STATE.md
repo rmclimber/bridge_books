@@ -2,7 +2,8 @@
 
 ## Current phase
 
-Repository foundation complete; runtime-boundary pilot is next.
+The runtime-boundary pilot is complete; the book is ready for its next
+vertical slice on absence, equality, numeric limits, and mutation.
 
 ## Completed
 
@@ -10,32 +11,35 @@ Repository foundation complete; runtime-boundary pilot is next.
 - Approved a strict-TypeScript, general Node.js library/CLI context.
 - Defined provisional exit competencies, misconception priorities, capstone,
   exit assessment, outline, and vertical slices.
+- Generated `pnpm-lock.yaml` for the documented Node 24 / TypeScript 5.9
+  toolchain and validated the TypeScript example checks.
+- Completed the runtime-boundary pilot: executable parser, tests, learner
+  exercise, worked solution, manuscript chapter, and independently built
+  workbook material.
+- Added a checked manuscript-snippet convention so executable source excerpts
+  cannot silently drift from the book.
 
 ## In progress
 
-- Resolving the certificate-chain configuration needed for the first locked
-  dependency install.
+- Planning the next approved vertical slice.
 
 ## Next priorities
 
-1. Resolve the first locked dependency install and validate example checks.
-2. Implement the approved runtime-boundary pilot slice.
-3. Revise page-density and source-inclusion conventions using the pilot.
+1. Implement the absence, equality, numeric-limits, and mutation slice.
+2. Add its executable examples, exercises, solutions, and matrix evidence.
+3. Reassess page density after the second substantive slice.
 
 ## Open decisions
 
-- Exact final supported Node and TypeScript patch versions after the first
-  locked install.
 - Whether HTML/ePub are release artifacts in addition to PDF.
 - Whether the solutions workbook ships with the first public release.
 
 ## Known issues / technical debt
 
-- No instructional manuscript material has been drafted yet.
-- The initial executable code is an infrastructure smoke test, not a learner
-  example.
-- The initial package install could not complete because the local npm registry
-  connection rejected its certificate chain; no lockfile has been generated.
+- The pilot is deliberately narrow; it does not yet cover schema libraries,
+  recursive validation, or error aggregation.
+- In this managed Windows environment, dependency installation requires the
+  Windows system CA store and must bypass injected offline/proxy variables.
 
 ## Important conventions currently in force
 
@@ -43,11 +47,14 @@ Repository foundation complete; runtime-boundary pilot is next.
 - Markdown is canonical; generated artifacts belong in `output/`.
 - Examples and assessments must be independently executable where practical.
 - The core book excludes framework specialization.
+- Manuscript excerpts marked `<!-- snippet: ... -->` must match their tagged
+  executable source region; `pnpm run verify:snippets` enforces this.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-03 (visual PDF inspection passed)
-- Workbook build: passed, 2026-11-03 (visual PDF inspection passed)
-- Repository checks: blocked pending the first locked dependency install
-- Release status: unreleased foundation
+- Main build: passed, 2026-11-04 (visual PDF inspection passed)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed)
+- Repository checks: passed, 2026-11-04 (type-check, snippet verification,
+  and 3 Node tests)
+- Release status: unreleased; one pilot slice drafted
 

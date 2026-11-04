@@ -2,8 +2,8 @@
 
 | Priority | Competency | Python expectation | TypeScript reality | Category | Evidence | Planned location |
 | --- | --- | --- | --- | --- | --- | --- |
-| P0 | Validate external data safely | An annotation can validate a value | Types are erased; untrusted values are `unknown` until checked | False friend | Parser tests and capstone import | Slice 2 |
-| P0 | Use `any` and `unknown` appropriately | `Any` is an unconstrained value | `any` removes checking; `unknown` requires narrowing | False friend | Type-error predictions and tests | Slice 2 |
+| P0 | Validate external data safely | An annotation can validate a value | Types are erased; untrusted values are `unknown` until checked | False friend | Parser tests, Exercise 1, and capstone import | Chapter 1: Runtime boundaries |
+| P0 | Use `any` and `unknown` appropriately | `Any` is an unconstrained value | `any` removes checking; `unknown` requires narrowing | False friend | Exercise 1 explanation and parser tests | Chapter 1: Runtime boundaries |
 | P0 | Model absence | `None` is the absence value | `null`, `undefined`, omission, and falsiness differ | False friend | Optional-field bug fix | Slice 3 |
 | P0 | Reason about structural typing | Duck typing is runtime capability | Structural compatibility is static and has boundaries | Paradigm shift | Assignability exercise | Slice 4 |
 | P0 | Use asynchronous I/O safely | `async` maps directly to coroutines/tasks | Async functions return Promises with distinct scheduling and rejection behavior | False friend | Filesystem tests | Slice 6 |

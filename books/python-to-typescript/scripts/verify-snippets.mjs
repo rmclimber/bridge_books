@@ -1,0 +1,32 @@
+import { readFile } from "node:fs/promises";
+
+const checks = [
+  {
+    manuscript: "manuscript/01-runtime-boundaries.md",
+    source: "src/runtime-boundary.ts",
+    region: "parseTaskDraft",
+  },
+];
+
+function normalize(text) {
+  return text.replaceAll("\r\n", "\n").trim();
+}
+
+for (const check of checks) {
+  const [manuscript, source] = await Promise.all([
+    readFile(check.manuscript, "utf8"),
+    readFile(check.source, "utf8"),
+  ]);
+  const sourceMatch = source.match(
+    new RegExp(`// #region ${check.region}\\r?\\n([\\s\\S]*?)// #endregion ${check.region}`),
+  );
+  const snippetMatch = manuscript.match(
+    new RegExp(`<!-- snippet: ${check.source.replaceAll(".", "\\.")}#${check.region} -->\\r?\\n\\x60\\x60\\x60ts\\r?\\n([\\s\\S]*?)\\r?\\n\\x60\\x60\\x60`),
+  );
+
+  if (!sourceMatch || !snippetMatch || normalize(sourceMatch[1]) !== normalize(snippetMatch[1])) {
+    throw new Error(`Snippet ${check.source}#${check.region} is missing or out of sync.`);
+  }
+}
+
+console.log(`Verified ${checks.length} manuscript snippet source(s).`);

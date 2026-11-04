@@ -5,8 +5,9 @@ strict TypeScript in a Node.js professional workflow.
 
 ## Status
 
-Planning and production foundation are in progress. No instructional chapter
-drafts have been started.
+The repository foundation and the first instructional pilot are complete. The
+current chapter covers runtime boundaries: erased types, `unknown`, validation,
+and narrowing.
 
 ## Commands
 

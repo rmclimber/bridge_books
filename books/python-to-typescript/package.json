@@ -1,6 +1,7 @@
 {
   "name": "python-to-typescript-bridge-book",
   "private": true,
+  "type": "module",
   "version": "0.0.0",
   "description": "Executable examples and validation for Python to TypeScript",
   "packageManager": "pnpm@11.7.0",
@@ -11,8 +12,9 @@
   "scripts": {
     "build:examples": "tsc --project tsconfig.json",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "test": "pnpm run build:examples && node --test dist/tests/smoke.test.js",
-    "check": "pnpm run typecheck && pnpm run test"
+    "test": "pnpm run build:examples && node --test dist/tests/*.test.js",
+    "verify:snippets": "node scripts/verify-snippets.mjs",
+    "check": "pnpm run typecheck && pnpm run verify:snippets && pnpm run test"
   },
   "devDependencies": {
     "@types/node": "24.10.1",
