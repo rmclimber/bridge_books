@@ -9,7 +9,9 @@ $sources = @(
   "manuscript/01-runtime-boundaries.md",
   "exercises/01-runtime-boundaries.md",
   "manuscript/02-values-that-look-familiar.md",
-  "exercises/02-values-that-look-familiar.md"
+  "exercises/02-values-that-look-familiar.md",
+  "manuscript/03-domain-modeling.md",
+  "exercises/03-domain-modeling.md"
 )
 pandoc $sources --metadata-file=metadata.yaml --from markdown --pdf-engine=pdflatex --output (Join-Path $outputDir "python-to-typescript.pdf")
 

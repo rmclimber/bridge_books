@@ -11,6 +11,11 @@ const checks = [
     source: "src/value-pitfalls.ts",
     region: "chooseRetryLimit",
   },
+  {
+    manuscript: "manuscript/03-domain-modeling.md",
+    source: "src/domain-modeling.ts",
+    region: "summarizeTasks",
+  },
 ];
 
 function normalize(text) {

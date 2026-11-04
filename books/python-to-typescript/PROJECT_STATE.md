@@ -2,8 +2,8 @@
 
 ## Current phase
 
-Two foundation slices are complete; the book is ready for domain modeling with
-unions, collections, generics, and structural typing.
+Three foundation slices are complete; the book is ready for modules, program
+structure, and `this`.
 
 ## Completed
 
@@ -21,16 +21,22 @@ unions, collections, generics, and structural typing.
 - Completed the values-that-look-familiar slice: absence, strict equality,
   numeric limits, and mutation, with executable examples, Exercise 2, and a
   worked solution.
+- Completed the domain-modeling slice: discriminated unions, `Map`/`Set`,
+  generic constraints, and static structural typing, with executable examples,
+  Exercise 3, and a worked solution.
 
 ## In progress
 
-- Planning the domain-modeling vertical slice.
+- Planning the modules, functions/classes, `this`, and program-structure
+  vertical slice.
 
 ## Next priorities
 
-1. Implement the unions, collections, generics, and structural-typing slice.
-2. Add its executable examples, exercises, solutions, and matrix evidence.
-3. Begin linking the domain-modeling examples to the task-tracker capstone.
+1. Implement the modules, functions/classes, `this`, and program-structure
+   slice.
+2. Begin linking the checked task-domain examples to the task-tracker capstone.
+3. Add the next slice's executable examples, exercises, solutions, and matrix
+   evidence.
 
 ## Open decisions
 
@@ -57,9 +63,9 @@ unions, collections, generics, and structural typing.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 5 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 2 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 6 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 3 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 7 Node tests)
-- Release status: unreleased; two foundation slices drafted
+  and 10 Node tests)
+- Release status: unreleased; three foundation slices drafted
 

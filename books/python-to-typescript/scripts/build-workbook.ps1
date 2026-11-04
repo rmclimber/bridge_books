@@ -7,7 +7,8 @@ New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
 $sources = @(
   "workbook/book.md",
   "solutions/01-runtime-boundaries.md",
-  "solutions/02-values-that-look-familiar.md"
+  "solutions/02-values-that-look-familiar.md",
+  "solutions/03-domain-modeling.md"
 )
 pandoc $sources --from markdown --pdf-engine=pdflatex --output (Join-Path $outputDir "python-to-typescript-workbook.pdf")
 
