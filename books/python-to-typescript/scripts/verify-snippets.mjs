@@ -26,6 +26,11 @@ const checks = [
     source: "src/task-presentation.ts",
     region: "formatTasks",
   },
+  {
+    manuscript: "manuscript/05-async-persistence.md",
+    source: "src/task-store.ts",
+    region: "loadTasks",
+  },
 ];
 
 function normalize(text) {

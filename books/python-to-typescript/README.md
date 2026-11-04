@@ -5,11 +5,12 @@ strict TypeScript in a Node.js professional workflow.
 
 ## Status
 
-The repository foundation and first four instructional slices are complete.
+The repository foundation and first five instructional slices are complete.
 The current material covers runtime boundaries; absence, equality, numeric
 limits, and mutation; domain modeling with unions, collections, generics, and
 structural typing; plus Node ESM modules, focused functions/classes, and
-`this` callback behavior.
+`this` callback behavior; plus Promises, asynchronous task persistence, errors,
+and tests.
 
 ## Commands
 

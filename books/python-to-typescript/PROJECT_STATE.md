@@ -2,8 +2,7 @@
 
 ## Current phase
 
-Four foundation slices are complete; the book is ready for promises,
-asynchronous persistence, errors, and tests.
+Five foundation slices are complete; the book is ready for capstone integration.
 
 ## Completed
 
@@ -27,19 +26,21 @@ asynchronous persistence, errors, and tests.
 - Completed the program-structure slice: Node ESM imports, focused module
   functions and classes, and `this` callback behavior, with executable
   examples, Exercise 4, and a worked solution.
+- Completed the promises, asynchronous persistence, errors, and tests slice:
+  checked filesystem-port example, Promise-aware tests, Exercise 5, and a
+  worked solution.
 
 ## In progress
 
-- Planning the promises, asynchronous persistence, errors, and tests vertical
-  slice.
+- Planning capstone integration around the checked task domain, persistence,
+  and presentation modules.
 
 ## Next priorities
 
-1. Implement the promises, asynchronous persistence, errors, and tests slice.
-2. Begin linking the checked task-domain and program-structure examples to the
-   task-tracker capstone.
-3. Add the next slice's executable examples, exercises, solutions, and matrix
-   evidence.
+1. Integrate the checked task-domain, program-structure, and persistence
+   examples into the task-tracker capstone.
+2. Define capstone acceptance tests and a small CLI surface.
+3. Add exit-assessment evidence after capstone integration.
 
 ## Open decisions
 
@@ -66,9 +67,9 @@ asynchronous persistence, errors, and tests.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 8 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 3 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 10 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 4 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 12 Node tests)
-- Release status: unreleased; four foundation slices drafted
+  and 15 Node tests)
+- Release status: unreleased; five foundation slices drafted
 
