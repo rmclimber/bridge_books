@@ -29,6 +29,13 @@ The reader-facing book is provisionally 52--64 pages, including in-chapter
 exercises. A separate solutions workbook is provisionally 25--35 pages;
 appendices are outside those estimates.
 
+The current manuscript is a validated 13-page foundation rather than a
+completed book-length draft. The detailed target architecture, expansion
+slices, acceptance criteria, and page-budget gates are recorded in
+`EXPANSION_PLAN.md`. This plan is authoritative for expansion work: a passing
+build and a completed minimal vertical slice do not by themselves satisfy the
+page budget or the full transition outcomes.
+
 ## Slice order
 
 1. Reproducible foundation.
@@ -39,4 +46,19 @@ appendices are outside those estimates.
 6. Promises, asynchronous persistence, errors, and tests.
 7. Capstone integration.
 8. Exit assessment and production pass.
+
+## Expansion sequence
+
+The original sequence built a usable spine. The next sequence expands that
+spine without adding framework specialization:
+
+1. E1 -- Orientation and static-model foundations.
+2. E2 -- Function and API design.
+3. E3 -- Objects, classes, and module boundaries.
+4. E4 -- Async control flow, errors, and persistence.
+5. E5 -- Testing, debugging, and maintainable change.
+6. E6 -- Capstone iterations.
+7. E7 -- Assessment and integration pass.
+
+See `EXPANSION_PLAN.md` for required deliverables and acceptance criteria.
 

@@ -4,6 +4,11 @@ The capstone is a framework-free typed local task-tracking CLI. Its command
 layer composes the checked domain model, presentation functions, and
 asynchronous persistence modules.
 
+It is currently a capstone seed. The planned expansion adds labels/filtering,
+paused-state migration, validation hardening, persistence-failure recovery,
+and a report command as separate, acceptance-tested increments. See
+`../EXPANSION_PLAN.md`.
+
 ## Commands
 
 After `pnpm run build:examples`, run:

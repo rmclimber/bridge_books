@@ -2,8 +2,9 @@
 
 ## Current phase
 
-The planned instructional slices are complete. The book is ready for external
-reader/practitioner review and release decisions.
+The validated foundation is complete, but the book is materially below its
+approved length and competency depth. Expansion toward the intended full
+Python-to-TypeScript transition is in progress.
 
 ## Completed
 
@@ -32,19 +33,19 @@ reader/practitioner review and release decisions.
   worked solution.
 - Completed capstone integration: framework-free task-ledger commands,
   acceptance tests, persisted task transitions, and a documented CLI surface.
-- Completed the exit assessment and production pass: independent extension
-  brief, scoring rubric, evaluator guide, and whole-book build verification.
+- Completed the initial exit-assessment and production-pass seed: independent
+  extension brief, scoring rubric, evaluator guide, and whole-book build
+  verification.
 
 ## In progress
 
-- No implementation slice is active.
+- Planning E1: orientation and static-model foundations.
 
 ## Next priorities
 
-1. Obtain an experienced TypeScript practitioner review.
-2. Trial the exit assessment with experienced Python programmers new to
-   TypeScript and revise persistent misunderstandings.
-3. Decide whether HTML/ePub and the solutions workbook ship in the first release.
+1. Implement E1 from `EXPANSION_PLAN.md`.
+2. Continue E2--E7 with their stated page and assessment gates.
+3. Conduct the first whole-book integration review at 30--35 reader pages.
 
 ## Open decisions
 
@@ -55,6 +56,9 @@ reader/practitioner review and release decisions.
 
 - The pilot is deliberately narrow; it does not yet cover schema libraries,
   recursive validation, or error aggregation.
+- The 13-page manuscript and 5-page workbook are foundations, not
+  release-ready artifacts. The approved targets remain 52--64 and 25--35
+  pages respectively; see `EXPANSION_PLAN.md`.
 - In this managed Windows environment, dependency installation requires the
   Windows system CA store and must bypass injected offline/proxy variables.
 
@@ -67,7 +71,14 @@ reader/practitioner review and release decisions.
 - Manuscript excerpts marked `<!-- snippet: ... -->` must match their tagged
   executable source region; `pnpm run verify:snippets` enforces this.
 - The early chapters use compact prose with one substantial checked example and
-  one exercise each; do not pad a short terminal exercise page merely to fill it.
+  one exercise each; retain this clarity, but expand missing competencies with
+  additional evidence rather than treating this early-chapter convention as a
+  whole-book length limit.
+- Page targets are integration gates. A passing build does not authorize a
+  release claim when competency or page-budget gaps remain.
+- Page targets are estimates, not quotas. Stop a topic when its learning
+  outcome has sufficient evidence; never add prose, examples, or exercises
+  merely to increase page count.
 
 ## Last validated state
 
@@ -75,5 +86,6 @@ reader/practitioner review and release decisions.
 - Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 5 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
   and 17 Node tests)
-- Release status: unreleased; draft complete, external review pending
+- Release status: unreleased; foundation validated, expansion required before
+  external review or release.
 
