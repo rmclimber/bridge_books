@@ -2,12 +2,12 @@
 
 | Priority | Competency | Python expectation | TypeScript reality | Category | Evidence | Planned location |
 | --- | --- | --- | --- | --- | --- | --- |
-| P0 | Validate external data safely | An annotation can validate a value | Types are erased; untrusted values are `unknown` until checked | False friend | Parser tests, Exercise 1, and capstone import | Chapter 1: Runtime boundaries |
+| P0 | Validate external data safely | An annotation can validate a value | Types are erased; untrusted values are `unknown` until checked | False friend | Parser tests, Exercise 1, and capstone persistence import | Chapters 1 and 6 |
 | P0 | Use `any` and `unknown` appropriately | `Any` is an unconstrained value | `any` removes checking; `unknown` requires narrowing | False friend | Exercise 1 explanation and parser tests | Chapter 1: Runtime boundaries |
 | P0 | Model absence | `None` is the absence value | `null`, `undefined`, omission, and falsiness differ | False friend | Exercise 2 and retry-policy tests | Chapter 2: Values that look familiar |
 | P0 | Model domain variants safely | State may be represented by loose flags or nullable fields | Discriminated unions make valid variants explicit and narrow by tag | New mechanism | Task-state tests and Exercise 3 | Chapter 3: Domain modeling |
 | P0 | Reason about structural typing | Duck typing is runtime capability | Structural compatibility is static and has boundaries | Paradigm shift | Generic assignability test and Exercise 3 | Chapter 3: Domain modeling |
-| P0 | Use asynchronous I/O safely | `async` maps directly to coroutines/tasks | Async functions return Promises with distinct scheduling and rejection behavior | False friend | Task-store tests and Exercise 5 | Chapter 5: Promises and persistence |
+| P0 | Use asynchronous I/O safely | `async` maps directly to coroutines/tasks | Async functions return Promises with distinct scheduling and rejection behavior | False friend | Task-store tests, Exercise 5, and capstone integration test | Chapters 5 and 6 |
 | P0 | Preserve actionable I/O failures | A missing file and a denied read may both become exceptions | Handle expected `ENOENT` deliberately; translate errors while preserving causes | Operational difference | Task-store rejection tests and Exercise 5 | Chapter 5: Promises and persistence |
 | P0 | Select collection types | A dictionary is the default mapping | Objects, `Record`, `Map`, and `Set` have different semantics | False friend | Task collection tests and Exercise 3 | Chapter 3: Domain modeling |
 | P1 | Preserve caller types with generics | A helper may discard detail as a base class or `Any` | Generic constraints retain each structural caller type | New mechanism | `findById` test and Exercise 3 | Chapter 3: Domain modeling |
@@ -15,4 +15,5 @@
 | P1 | Respect numeric limits | Integers are arbitrary precision | `number` is IEEE-754; `bigint` is separate | Operational difference | Exercise 2 and opaque-ID test | Chapter 2: Values that look familiar |
 | P1 | Organize a project | Imports are straightforward inclusion | ESM resolution and package metadata shape execution | Operational difference | ESM module test and Exercise 4 | Chapter 4: Program structure |
 | P1 | Avoid `this` callback failures | Instance methods retain their receiver | `this` depends on call site | New mechanism | Formatter callback test and Exercise 4 | Chapter 4: Program structure |
+| P0 | Integrate a small typed Node program | A script can mix parsing, state, and I/O freely | Thin command layer composes typed modules and awaits observable persistence | Professional workflow | Task-ledger acceptance tests and capstone CLI | Chapter 6: Capstone integration |
 

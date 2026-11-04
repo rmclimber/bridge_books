@@ -2,7 +2,8 @@
 
 ## Current phase
 
-Five foundation slices are complete; the book is ready for capstone integration.
+Five foundation slices and capstone integration are complete; the book is ready
+for the exit assessment and production pass.
 
 ## Completed
 
@@ -29,18 +30,18 @@ Five foundation slices are complete; the book is ready for capstone integration.
 - Completed the promises, asynchronous persistence, errors, and tests slice:
   checked filesystem-port example, Promise-aware tests, Exercise 5, and a
   worked solution.
+- Completed capstone integration: framework-free task-ledger commands,
+  acceptance tests, persisted task transitions, and a documented CLI surface.
 
 ## In progress
 
-- Planning capstone integration around the checked task domain, persistence,
-  and presentation modules.
+- Planning the exit assessment and production pass.
 
 ## Next priorities
 
-1. Integrate the checked task-domain, program-structure, and persistence
-   examples into the task-tracker capstone.
-2. Define capstone acceptance tests and a small CLI surface.
-3. Add exit-assessment evidence after capstone integration.
+1. Add the independent exit assessment and a worked evaluation rubric.
+2. Perform a whole-book integration and production pass.
+3. Decide whether HTML/ePub and the solutions workbook ship in the first release.
 
 ## Open decisions
 
@@ -67,9 +68,9 @@ Five foundation slices are complete; the book is ready for capstone integration.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 10 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 12 pages)
 - Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 4 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 15 Node tests)
-- Release status: unreleased; five foundation slices drafted
+  and 17 Node tests)
+- Release status: unreleased; five foundation slices and capstone drafted
 

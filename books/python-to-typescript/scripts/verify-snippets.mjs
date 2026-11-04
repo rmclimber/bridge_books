@@ -31,6 +31,11 @@ const checks = [
     source: "src/task-store.ts",
     region: "loadTasks",
   },
+  {
+    manuscript: "manuscript/06-capstone-integration.md",
+    source: "src/task-ledger.ts",
+    region: "runTaskLedger",
+  },
 ];
 
 function normalize(text) {
