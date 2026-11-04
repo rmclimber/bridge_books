@@ -2,8 +2,8 @@
 
 ## Current phase
 
-The runtime-boundary pilot is complete; the book is ready for its next
-vertical slice on absence, equality, numeric limits, and mutation.
+Two foundation slices are complete; the book is ready for domain modeling with
+unions, collections, generics, and structural typing.
 
 ## Completed
 
@@ -18,16 +18,19 @@ vertical slice on absence, equality, numeric limits, and mutation.
   workbook material.
 - Added a checked manuscript-snippet convention so executable source excerpts
   cannot silently drift from the book.
+- Completed the values-that-look-familiar slice: absence, strict equality,
+  numeric limits, and mutation, with executable examples, Exercise 2, and a
+  worked solution.
 
 ## In progress
 
-- Planning the next approved vertical slice.
+- Planning the domain-modeling vertical slice.
 
 ## Next priorities
 
-1. Implement the absence, equality, numeric-limits, and mutation slice.
+1. Implement the unions, collections, generics, and structural-typing slice.
 2. Add its executable examples, exercises, solutions, and matrix evidence.
-3. Reassess page density after the second substantive slice.
+3. Begin linking the domain-modeling examples to the task-tracker capstone.
 
 ## Open decisions
 
@@ -49,12 +52,14 @@ vertical slice on absence, equality, numeric limits, and mutation.
 - The core book excludes framework specialization.
 - Manuscript excerpts marked `<!-- snippet: ... -->` must match their tagged
   executable source region; `pnpm run verify:snippets` enforces this.
+- The early chapters use compact prose with one substantial checked example and
+  one exercise each; do not pad a short terminal exercise page merely to fill it.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 5 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 2 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 3 Node tests)
-- Release status: unreleased; one pilot slice drafted
+  and 7 Node tests)
+- Release status: unreleased; two foundation slices drafted
 

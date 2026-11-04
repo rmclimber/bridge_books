@@ -6,6 +6,11 @@ const checks = [
     source: "src/runtime-boundary.ts",
     region: "parseTaskDraft",
   },
+  {
+    manuscript: "manuscript/02-values-that-look-familiar.md",
+    source: "src/value-pitfalls.ts",
+    region: "chooseRetryLimit",
+  },
 ];
 
 function normalize(text) {

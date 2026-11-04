@@ -5,9 +5,9 @@ strict TypeScript in a Node.js professional workflow.
 
 ## Status
 
-The repository foundation and the first instructional pilot are complete. The
-current chapter covers runtime boundaries: erased types, `unknown`, validation,
-and narrowing.
+The repository foundation and first two instructional slices are complete. The
+current material covers runtime boundaries plus absence, equality, numeric
+limits, and mutation.
 
 ## Commands
 
