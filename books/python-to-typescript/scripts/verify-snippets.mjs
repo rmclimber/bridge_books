@@ -52,6 +52,16 @@ const checks = [
     region: "formatTasks",
   },
   {
+    manuscript: "manuscript/04-objects-modules.md",
+    source: "src/task-views.ts",
+    region: "selectOpenViews",
+  },
+  {
+    manuscript: "manuscript/04-objects-modules.md",
+    source: "src/task-report.ts",
+    region: "renderOpenReport",
+  },
+  {
     manuscript: "manuscript/05-async-persistence.md",
     source: "src/task-store.ts",
     region: "loadTasks",

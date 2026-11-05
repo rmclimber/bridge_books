@@ -45,14 +45,22 @@ Python-to-TypeScript transition is in progress.
   unions, Record/Map boundary choices, executable examples, Exercise 7, and
   its worked solution. The slice is five dense reader pages rather than its
   6--7-page estimate; no competency evidence required filler.
+- Completed E3, objects, classes, and module boundaries: structural object
+  contracts, `type` versus `interface`, module functions versus stateful
+  classes, composition, JavaScript `#` private fields, type-only imports,
+  dependency direction, package scripts, and NodeNext diagnostics. The
+  checked task-view/report refactor, Exercise 8, and its worked solution
+  provide the required implementation and diagnostic evidence. The slice is
+  five dense reader pages rather than its 6--7-page estimate; its outcomes are
+  covered without additional filler.
 
 ## In progress
 
-- Planning E3: objects, classes, and module boundaries.
+- Planning E4: async control flow, errors, and persistence.
 
 ## Next priorities
 
-1. Implement E3 from `EXPANSION_PLAN.md`.
+1. Implement E4 from `EXPANSION_PLAN.md`.
 2. Continue E4--E7 with their stated page and assessment gates.
 3. Conduct the first whole-book integration review at 30--35 reader pages.
 
@@ -65,7 +73,7 @@ Python-to-TypeScript transition is in progress.
 
 - The pilot is deliberately narrow; it does not yet cover schema libraries,
   recursive validation, or error aggregation.
-- The 21-page manuscript and 7-page workbook are foundations, not
+- The 26-page manuscript and 9-page workbook are foundations, not
   release-ready artifacts. The approved targets remain 52--64 and 25--35
   pages respectively; see `EXPANSION_PLAN.md`.
 - In this managed Windows environment, dependency installation requires the
@@ -91,10 +99,10 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 21 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 7 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 26 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 9 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 25 Node tests)
+  and 27 Node tests)
 - Release status: unreleased; foundation validated, expansion required before
   external review or release.
 

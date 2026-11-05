@@ -18,6 +18,8 @@ $sources = @(
   "exercises/03-domain-modeling.md",
   "manuscript/04-program-structure.md",
   "exercises/04-program-structure.md",
+  "manuscript/04-objects-modules.md",
+  "exercises/08-objects-modules.md",
   "manuscript/05-async-persistence.md",
   "exercises/05-async-persistence.md",
   "manuscript/06-capstone-integration.md",
