@@ -78,17 +78,20 @@ Python-to-TypeScript transition is in progress.
   worked solutions provide the required incremental evidence. The slice adds
   four-plus dense reader pages rather than its 7--8-page estimate; its
   outcomes are covered without padding.
+- Completed E7, assessment and integration pass: replaced the duplicated pause
+  assessment with an independent priority migration, added legacy JSON fixture
+  and learner checklist, expanded rubric examples and evaluator guidance, added
+  final mental-model and further-study material, and recorded the matrix audit.
 
 ## In progress
 
-- Preparing the E7 assessment and integration pass after the expanded capstone.
+- Preparing practitioner and learner review for the integrated manuscript.
 
 ## Next priorities
 
-1. Implement E7 from `EXPANSION_PLAN.md`, revising the exit assessment so it
-   does not duplicate the guided paused-state feature.
-2. Conduct the stated matrix audit and workbook-depth pass as part of E7.
-3. Continue toward practitioner and learner review as the target ranges near.
+1. Obtain practitioner and learner review of the integrated manuscript.
+2. Address review findings and assess remaining page-budget gaps by competency.
+3. Decide whether HTML/ePub and the workbook ship in the first release.
 
 ## Open decisions
 
@@ -126,7 +129,7 @@ Python-to-TypeScript transition is in progress.
 ## Last validated state
 
 - Main build: passed, 2026-11-05 (visual PDF inspection passed; 39 pages)
-- Workbook build: passed, 2026-11-05 (visual PDF inspection passed; 17 pages)
+- Workbook build: passed, 2026-11-05 (visual PDF inspection passed; 25 pages)
 - Repository checks: passed, 2026-11-05 (type-check, 20 synchronized snippets,
   and 39 Node tests)
 - Release status: unreleased; foundation validated, expansion required before

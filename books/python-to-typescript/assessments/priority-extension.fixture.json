@@ -1,0 +1,5 @@
+[
+  { "id": "legacy-open", "title": "Plan the next slice", "labels": ["book"], "state": { "kind": "open" } },
+  { "id": "legacy-paused", "title": "Wait for review", "labels": ["book"], "state": { "kind": "paused", "reason": "Awaiting editor" } },
+  { "id": "legacy-done", "title": "Run checks", "labels": ["testing"], "state": { "kind": "done", "completedAt": "2026-11-05T12:00:00.000Z" } }
+]

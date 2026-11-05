@@ -1,57 +1,47 @@
-# Exit assessment: extend the task ledger
+# Exit assessment: migrate task priority
 
-Work independently in a new branch or copy of this repository. Do not consult
-the workbook until you have run your own checks and recorded your explanation.
+Work independently in a fresh branch or copy. Do not open the workbook until
+you have run your own checks and recorded an explanation.
 
 ## Scenario
 
-The task ledger needs a paused state for work blocked on an external decision.
-Existing `open` and `done` tasks must continue to load. An older
-`tasks.json` file contains only those two states.
+The ledger needs a priority for planning work. Existing JSON has no priority
+field, so it must keep loading with a deliberate default. Use
+`priority-extension.fixture.json` as legacy input. This is not a repeat of the
+guided `pause` feature.
 
 ## Deliverables
 
-1. Add `{ kind: "paused"; reason: string }` to `TaskState`. A pause reason
-   must be non-empty after trimming.
-2. Migrate the persistence parser so it accepts persisted paused tasks, rejects
-   missing or blank reasons, and still rejects malformed timestamps for done
-   tasks.
-3. Add `pause <id> <reason>` to the task-ledger command layer. It must:
-   - await persistence before reporting success;
-   - reject a missing task and an already-done task;
-   - preserve the task ID, title, and labels;
-   - report `Paused <id>` only after saving.
-4. Fix the existing command bug: `add "" "Title"` must reject instead of persisting
-   an empty ID.
-5. Add focused tests for the migration, pause command, and empty-ID regression.
-   Run `pnpm run check`.
-6. Write 150--250 words answering:
-   - Why does a TypeScript type change not migrate existing JSON by itself?
-   - Which errors are expected command/domain errors versus unexpected I/O
-     failures, and where should each be handled?
-   - Why must the pause command await `save` before it writes success output?
+1. Add a `Priority` model with only `"low"`, `"normal"`, and `"high"`, plus a
+   required `priority` on trusted `Task` values.
+2. At the persistence boundary, migrate a missing JSON priority to `"normal"`.
+   Reject a present priority outside those literals. Keep open, paused, and
+   done validation intact.
+3. Add `prioritize <id> <priority>`. It validates input, preserves other task
+   fields, awaits save, then prints `Prioritized <id> <priority>`.
+4. Add read-only `list --priority <priority>`. Invalid literals reject with
+   usage rather than silently returning no tasks.
+5. Test legacy defaulting, malformed JSON, command validation, success, a
+   no-write query, and a failed save with no success output. Run `pnpm run check`.
+6. In 180--260 words explain why defaulting belongs at the persistence boundary,
+   which facts are syntax/domain/JSON rules, and why save must settle first.
 
 ## Acceptance evidence
 
-Your test evidence must demonstrate all of the following:
+- Legacy tasks load as normal priority.
+- All priorities round-trip; invalid persisted priority rejects as data error.
+- `prioritize` changes only its target and reports only after save.
+- `list --priority high` does not write.
+- A rejected write preserves known-good fake-file text and emits no success.
 
-- A legacy open task still loads.
-- A paused task round-trips with its reason.
-- A blank paused reason rejects at the persistence boundary.
-- `pause` reports success only after persistence resolves.
-- Empty IDs never reach the stored JSON.
-- The full repository check remains green.
-
-## Scoring rubric
+## Rubric
 
 | Dimension | 0 | 1 | 2 | 3 |
 | --- | --- | --- | --- | --- |
-| Domain and migration | Missing | Union only | Validates paused JSON | Preserves all variants and invariants |
-| Async command behavior | Missing | Starts a save | Awaits save | Correct results and failure paths |
-| Tests and regression | Missing | Happy path only | Covers new feature | Covers migration, failure, and regression |
-| Explanation | Missing | Names concepts | Explains mechanics | Connects types, runtime data, and errors |
+| Domain and migration | Missing | Broad string/cast | Parses literals and defaults legacy data | Preserves invariants across states |
+| Command behavior | Missing | Happy path | Validates and awaits save | Separates syntax, domain, failure paths |
+| Tests | Missing | New command only | Migration and success | Legacy, malformed, no-write, failed-save |
+| Explanation | Missing | Names concepts | Explains boundaries | Connects data, Promise order, maintenance |
 
-Score each dimension from 0--3. A score of 9 or more, with no zero in the
-first three dimensions, meets this book's exit bar. This is evidence of
-readiness for the scoped Node.js work in this book, not a guarantee of
-framework expertise or interview performance.
+A score of 9/12, with no zero in the first three rows, meets the scoped exit
+bar. It is evidence of readiness for this Node work, not framework expertise.
