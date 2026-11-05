@@ -82,6 +82,11 @@ const checks = [
     region: "migrateTaskDocument",
   },
   {
+    manuscript: "manuscript/05-testing-debugging.md",
+    source: "src/task-listing.ts",
+    region: "listOpenTaskTitles",
+  },
+  {
     manuscript: "manuscript/06-capstone-integration.md",
     source: "src/task-ledger.ts",
     region: "runTaskLedger",

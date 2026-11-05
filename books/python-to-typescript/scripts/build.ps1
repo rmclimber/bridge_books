@@ -25,6 +25,9 @@ $sources = @(
   "manuscript/05-async-control-flow.md",
   "exercises/09-async-control-flow.md",
   "exercises/10-persistence-migration.md",
+  "manuscript/05-testing-debugging.md",
+  "exercises/11-test-boundaries.md",
+  "exercises/12-repair-a-false-green-test.md",
   "manuscript/06-capstone-integration.md",
   "manuscript/07-exit-assessment.md"
 )

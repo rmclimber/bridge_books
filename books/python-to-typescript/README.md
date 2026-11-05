@@ -5,14 +5,15 @@ strict TypeScript in a Node.js professional workflow.
 
 ## Status
 
-The repository contains a validated foundation: five instructional slices,
-capstone integration, and an exit-assessment seed. It is not yet the planned
-book-length transition.
+The repository contains a validated foundation plus five competency-driven
+expansion slices, capstone integration, and an exit-assessment seed. It is not
+yet the planned book-length transition.
 The current material covers runtime boundaries; absence, equality, numeric
 limits, and mutation; domain modeling with unions, collections, generics, and
 structural typing; plus Node ESM modules, focused functions/classes, and
 `this` callback behavior; plus Promises, asynchronous task persistence, errors,
-and tests.
+and tests; plus async control flow, migration, test boundaries, debugging, and
+maintainable-change workflow.
 
 The `task-ledger` capstone integrates those modules behind `list`, `add`,
 and `complete` commands. See `capstone/README.md`.
