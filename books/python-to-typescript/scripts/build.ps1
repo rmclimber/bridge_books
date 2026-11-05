@@ -22,6 +22,9 @@ $sources = @(
   "exercises/08-objects-modules.md",
   "manuscript/05-async-persistence.md",
   "exercises/05-async-persistence.md",
+  "manuscript/05-async-control-flow.md",
+  "exercises/09-async-control-flow.md",
+  "exercises/10-persistence-migration.md",
   "manuscript/06-capstone-integration.md",
   "manuscript/07-exit-assessment.md"
 )

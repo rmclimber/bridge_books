@@ -67,6 +67,21 @@ const checks = [
     region: "loadTasks",
   },
   {
+    manuscript: "manuscript/05-async-control-flow.md",
+    source: "src/async-control-flow.ts",
+    region: "runSequentially",
+  },
+  {
+    manuscript: "manuscript/05-async-control-flow.md",
+    source: "src/async-control-flow.ts",
+    region: "useResource",
+  },
+  {
+    manuscript: "manuscript/05-async-control-flow.md",
+    source: "src/persistence-migration.ts",
+    region: "migrateTaskDocument",
+  },
+  {
     manuscript: "manuscript/06-capstone-integration.md",
     source: "src/task-ledger.ts",
     region: "runTaskLedger",

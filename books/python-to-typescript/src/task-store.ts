@@ -19,6 +19,13 @@ export class TaskStorageError extends Error {
   }
 }
 
+export class TaskDataError extends TaskStorageError {
+  constructor(message: string, options?: ErrorOptions) {
+    super(message, options);
+    this.name = "TaskDataError";
+  }
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -82,7 +89,7 @@ export class TaskStore {
     try {
       return parseTasks(JSON.parse(text) as unknown);
     } catch (error) {
-      throw new TaskStorageError("The task file is not valid task data.", { cause: error });
+      throw new TaskDataError("The task file is not valid task data.", { cause: error });
     }
   }
   // #endregion loadTasks

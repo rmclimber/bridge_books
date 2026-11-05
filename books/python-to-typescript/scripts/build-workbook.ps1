@@ -14,7 +14,9 @@ $sources = @(
   "solutions/06-exit-assessment.md",
   "solutions/07-static-model-map.md",
   "solutions/08-function-api-design.md",
-  "solutions/09-objects-modules.md"
+  "solutions/09-objects-modules.md",
+  "solutions/10-async-control-flow.md",
+  "solutions/11-persistence-migration.md"
 )
 pandoc $sources --from markdown --pdf-engine=pdflatex --output (Join-Path $outputDir "python-to-typescript-workbook.pdf")
 

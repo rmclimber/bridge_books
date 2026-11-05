@@ -1,7 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { TaskStorageError, TaskStore, type TextFiles } from "../src/task-store.js";
+import {
+  TaskDataError,
+  TaskStorageError,
+  TaskStore,
+  type TextFiles,
+} from "../src/task-store.js";
 
 class MemoryFiles implements TextFiles {
   readonly contents = new Map<string, string>();
@@ -48,7 +53,7 @@ test("save and load await persistence and restore completed dates", async () => 
 test("malformed data and unexpected I/O failures reject with useful context", async () => {
   const malformed = new MemoryFiles();
   malformed.contents.set("tasks.json", "{not json");
-  await assert.rejects(new TaskStore("tasks.json", malformed).load(), TaskStorageError);
+  await assert.rejects(new TaskStore("tasks.json", malformed).load(), TaskDataError);
 
   const denied: TextFiles = {
     read: async () => {

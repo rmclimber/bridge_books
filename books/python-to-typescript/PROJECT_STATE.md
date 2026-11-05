@@ -53,14 +53,21 @@ Python-to-TypeScript transition is in progress.
   provide the required implementation and diagnostic evidence. The slice is
   five dense reader pages rather than its 6--7-page estimate; its outcomes are
   covered without additional filler.
+- Completed E4, async control flow, errors, and persistence: sequential
+  versus concurrent effects, `Promise.all` rejection without cancellation,
+  async cleanup, an actionable storage/data error taxonomy, and versioned
+  persistence migration. Deterministic order and migration fixtures, Exercises
+  9 and 10, and their worked solutions provide the required evidence. The
+  slice contributes five dense reader pages rather than its 6--7-page
+  estimate; the planned outcomes are covered without padding.
 
 ## In progress
 
-- Planning E4: async control flow, errors, and persistence.
+- Planning E5: testing, debugging, and maintainable change.
 
 ## Next priorities
 
-1. Implement E4 from `EXPANSION_PLAN.md`.
+1. Implement E5 from `EXPANSION_PLAN.md`.
 2. Continue E4--E7 with their stated page and assessment gates.
 3. Conduct the first whole-book integration review at 30--35 reader pages.
 
@@ -73,7 +80,7 @@ Python-to-TypeScript transition is in progress.
 
 - The pilot is deliberately narrow; it does not yet cover schema libraries,
   recursive validation, or error aggregation.
-- The 26-page manuscript and 9-page workbook are foundations, not
+- The 31-page manuscript and 12-page workbook are foundations, not
   release-ready artifacts. The approved targets remain 52--64 and 25--35
   pages respectively; see `EXPANSION_PLAN.md`.
 - In this managed Windows environment, dependency installation requires the
@@ -99,10 +106,10 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 26 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 9 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 31 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 12 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 27 Node tests)
+  and 34 Node tests)
 - Release status: unreleased; foundation validated, expansion required before
   external review or release.
 

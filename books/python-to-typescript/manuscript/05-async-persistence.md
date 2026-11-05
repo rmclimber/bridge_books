@@ -28,7 +28,7 @@ is expected to be handled there.
     try {
       return parseTasks(JSON.parse(text) as unknown);
     } catch (error) {
-      throw new TaskStorageError("The task file is not valid task data.", { cause: error });
+      throw new TaskDataError("The task file is not valid task data.", { cause: error });
     }
   }
 ```
