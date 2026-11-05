@@ -36,15 +36,19 @@ Python-to-TypeScript transition is in progress.
 - Completed the initial exit-assessment and production-pass seed: independent
   extension brief, scoring rubric, evaluator guide, and whole-book build
   verification.
+- Completed E1, orientation and static-model foundations: a four-page
+  checker-versus-runtime map, reproducible project verification, inference and
+  assignability guidance, exhaustive-union maintenance checks, executable
+  examples, Exercise 6, and its worked solution.
 
 ## In progress
 
-- Planning E1: orientation and static-model foundations.
+- Planning E2: function and API design.
 
 ## Next priorities
 
-1. Implement E1 from `EXPANSION_PLAN.md`.
-2. Continue E2--E7 with their stated page and assessment gates.
+1. Implement E2 from `EXPANSION_PLAN.md`.
+2. Continue E3--E7 with their stated page and assessment gates.
 3. Conduct the first whole-book integration review at 30--35 reader pages.
 
 ## Open decisions
@@ -56,7 +60,7 @@ Python-to-TypeScript transition is in progress.
 
 - The pilot is deliberately narrow; it does not yet cover schema libraries,
   recursive validation, or error aggregation.
-- The 13-page manuscript and 5-page workbook are foundations, not
+- The 16-page manuscript and 6-page workbook are foundations, not
   release-ready artifacts. The approved targets remain 52--64 and 25--35
   pages respectively; see `EXPANSION_PLAN.md`.
 - In this managed Windows environment, dependency installation requires the
@@ -82,10 +86,10 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 13 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 5 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 16 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 6 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 17 Node tests)
+  and 19 Node tests)
 - Release status: unreleased; foundation validated, expansion required before
   external review or release.
 

@@ -2,6 +2,16 @@ import { readFile } from "node:fs/promises";
 
 const checks = [
   {
+    manuscript: "manuscript/01-static-model-map.md",
+    source: "src/static-model.ts",
+    region: "checkedSettings",
+  },
+  {
+    manuscript: "manuscript/01-static-model-map.md",
+    source: "src/static-model.ts",
+    region: "summarizeImport",
+  },
+  {
     manuscript: "manuscript/01-runtime-boundaries.md",
     source: "src/runtime-boundary.ts",
     region: "parseTaskDraft",

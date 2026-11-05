@@ -6,6 +6,8 @@ New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
 
 $sources = @(
   "manuscript/00-front-matter.md",
+  "manuscript/01-static-model-map.md",
+  "exercises/06-static-model-map.md",
   "manuscript/01-runtime-boundaries.md",
   "exercises/01-runtime-boundaries.md",
   "manuscript/02-values-that-look-familiar.md",
