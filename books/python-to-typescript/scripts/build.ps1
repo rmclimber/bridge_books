@@ -12,6 +12,8 @@ $sources = @(
   "exercises/01-runtime-boundaries.md",
   "manuscript/02-values-that-look-familiar.md",
   "exercises/02-values-that-look-familiar.md",
+  "manuscript/03-function-api-design.md",
+  "exercises/07-function-api-design.md",
   "manuscript/03-domain-modeling.md",
   "exercises/03-domain-modeling.md",
   "manuscript/04-program-structure.md",

@@ -22,6 +22,21 @@ const checks = [
     region: "chooseRetryLimit",
   },
   {
+    manuscript: "manuscript/03-function-api-design.md",
+    source: "src/function-apis.ts",
+    region: "listTitles",
+  },
+  {
+    manuscript: "manuscript/03-function-api-design.md",
+    source: "src/function-apis.ts",
+    region: "withAddedLabel",
+  },
+  {
+    manuscript: "manuscript/03-function-api-design.md",
+    source: "src/function-apis.ts",
+    region: "sortedTitlesAndIndexes",
+  },
+  {
     manuscript: "manuscript/03-domain-modeling.md",
     source: "src/domain-modeling.ts",
     region: "summarizeTasks",

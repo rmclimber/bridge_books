@@ -40,15 +40,20 @@ Python-to-TypeScript transition is in progress.
   checker-versus-runtime map, reproducible project verification, inference and
   assignability guidance, exhaustive-union maintenance checks, executable
   examples, Exercise 6, and its worked solution.
+- Completed E2, function and API design: optionality and defaults, typed
+  generic callbacks, readonly and copy-on-write contracts, overloads versus
+  unions, Record/Map boundary choices, executable examples, Exercise 7, and
+  its worked solution. The slice is five dense reader pages rather than its
+  6--7-page estimate; no competency evidence required filler.
 
 ## In progress
 
-- Planning E2: function and API design.
+- Planning E3: objects, classes, and module boundaries.
 
 ## Next priorities
 
-1. Implement E2 from `EXPANSION_PLAN.md`.
-2. Continue E3--E7 with their stated page and assessment gates.
+1. Implement E3 from `EXPANSION_PLAN.md`.
+2. Continue E4--E7 with their stated page and assessment gates.
 3. Conduct the first whole-book integration review at 30--35 reader pages.
 
 ## Open decisions
@@ -60,7 +65,7 @@ Python-to-TypeScript transition is in progress.
 
 - The pilot is deliberately narrow; it does not yet cover schema libraries,
   recursive validation, or error aggregation.
-- The 16-page manuscript and 6-page workbook are foundations, not
+- The 21-page manuscript and 7-page workbook are foundations, not
   release-ready artifacts. The approved targets remain 52--64 and 25--35
   pages respectively; see `EXPANSION_PLAN.md`.
 - In this managed Windows environment, dependency installation requires the
@@ -86,10 +91,10 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 16 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 6 pages)
+- Main build: passed, 2026-11-04 (visual PDF inspection passed; 21 pages)
+- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 7 pages)
 - Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 19 Node tests)
+  and 25 Node tests)
 - Release status: unreleased; foundation validated, expansion required before
   external review or release.
 
