@@ -67,16 +67,28 @@ Python-to-TypeScript transition is in progress.
   and their worked solutions provide the required evidence. The slice adds
   four dense reader pages rather than its 5--6-page estimate; its outcomes are
   covered without padding.
+- Completed the 2026-11-05 whole-book prerequisite and duplication review.
+  The review keeps the concise foundation intact, identifies no chapter for
+  removal, distinguishes versioned-document migration from the capstone array
+  parser, and records that E7 must revise the now-guided paused-state exit
+  assessment.
+- Completed E6, capstone iterations: labels and filtered views, paused-state
+  compatibility, command validation, failed-write behavior, and a read-model
+  report. The checked capstone acceptance tests, Exercises 13--14, and their
+  worked solutions provide the required incremental evidence. The slice adds
+  four-plus dense reader pages rather than its 7--8-page estimate; its
+  outcomes are covered without padding.
 
 ## In progress
 
-- Preparing the 30--35-page whole-book prerequisite and duplication review.
+- Preparing the E7 assessment and integration pass after the expanded capstone.
 
 ## Next priorities
 
-1. Conduct the first whole-book integration review before starting E6.
-2. Implement E6 from `EXPANSION_PLAN.md`.
-3. Continue E7 with its stated assessment gate.
+1. Implement E7 from `EXPANSION_PLAN.md`, revising the exit assessment so it
+   does not duplicate the guided paused-state feature.
+2. Conduct the stated matrix audit and workbook-depth pass as part of E7.
+3. Continue toward practitioner and learner review as the target ranges near.
 
 ## Open decisions
 
@@ -87,7 +99,7 @@ Python-to-TypeScript transition is in progress.
 
 - The pilot is deliberately narrow; it does not yet cover schema libraries,
   recursive validation, or error aggregation.
-- The 35-page manuscript and 15-page workbook are foundations, not
+- The manuscript and workbook remain foundations, not
   release-ready artifacts. The approved targets remain 52--64 and 25--35
   pages respectively; see `EXPANSION_PLAN.md`.
 - In this managed Windows environment, dependency installation requires the
@@ -113,10 +125,10 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-04 (visual PDF inspection passed; 35 pages)
-- Workbook build: passed, 2026-11-04 (visual PDF inspection passed; 15 pages)
-- Repository checks: passed, 2026-11-04 (type-check, snippet verification,
-  and 36 Node tests)
+- Main build: passed, 2026-11-05 (visual PDF inspection passed; 39 pages)
+- Workbook build: passed, 2026-11-05 (visual PDF inspection passed; 17 pages)
+- Repository checks: passed, 2026-11-05 (type-check, 20 synchronized snippets,
+  and 39 Node tests)
 - Release status: unreleased; foundation validated, expansion required before
   external review or release.
 

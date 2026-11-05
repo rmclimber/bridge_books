@@ -8,7 +8,8 @@ export type Task = {
 
 export type TaskState =
   | { kind: "open" }
-  | { kind: "done"; completedAt: Date };
+  | { kind: "done"; completedAt: Date }
+  | { kind: "paused"; reason: string };
 
 export type HasId = { id: string };
 
@@ -20,6 +21,8 @@ export function summarizeTasks(tasks: readonly Task[]): string[] {
         return `[open] ${task.title}`;
       case "done":
         return `[done ${task.state.completedAt.toISOString()}] ${task.title}`;
+      case "paused":
+        return `[paused: ${task.state.reason}] ${task.title}`;
     }
   });
 }

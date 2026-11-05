@@ -4,10 +4,9 @@ The capstone is a framework-free typed local task-tracking CLI. Its command
 layer composes the checked domain model, presentation functions, and
 asynchronous persistence modules.
 
-It is currently a capstone seed. The planned expansion adds labels/filtering,
-paused-state migration, validation hardening, persistence-failure recovery,
-and a report command as separate, acceptance-tested increments. See
-`../EXPANSION_PLAN.md`.
+It evolves through acceptance-tested increments: labels and filtered views,
+paused-state compatibility, command validation, persistence-failure recovery,
+and a report command. See `../manuscript/06-capstone-iterations.md`.
 
 ## Commands
 
@@ -18,6 +17,9 @@ $env:TASK_LEDGER_FILE = ".\\tasks.json"
 node dist/src/task-ledger-cli.js add t1 "Ship the book"
 node dist/src/task-ledger-cli.js list
 node dist/src/task-ledger-cli.js complete t1
+node dist/src/task-ledger-cli.js label t1 book
+node dist/src/task-ledger-cli.js list --label book
+node dist/src/task-ledger-cli.js report
 ```
 
 The file variable is optional; the default is `tasks.json` in the current
@@ -31,6 +33,10 @@ directory.
   function.
 - `complete <id>` persists a completion timestamp and reports success only
   after writing.
+- `label <id> <label>` adds a distinct label, while `list --label <label>`
+  filters a view without changing persistence.
+- `pause <id> <reason>` persists a non-empty reason, and `report` counts all
+  states.
 - Duplicate IDs, missing tasks, malformed commands, malformed JSON, and
   unexpected I/O failures reject with useful errors; failed commands do not
   overwrite valid task data.

@@ -87,9 +87,19 @@ const checks = [
     region: "listOpenTaskTitles",
   },
   {
-    manuscript: "manuscript/06-capstone-integration.md",
+    manuscript: "manuscript/06-capstone-iterations.md",
     source: "src/task-ledger.ts",
-    region: "runTaskLedger",
+    region: "pauseCommand",
+  },
+  {
+    manuscript: "manuscript/06-capstone-iterations.md",
+    source: "src/task-ledger.ts",
+    region: "renderTaskReport",
+  },
+  {
+    manuscript: "manuscript/06-capstone-iterations.md",
+    source: "tests/task-ledger.test.ts",
+    region: "capstoneIncrements",
   },
 ];
 

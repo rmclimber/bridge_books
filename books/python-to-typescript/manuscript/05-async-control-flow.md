@@ -156,7 +156,7 @@ export function migrateTaskDocument(value: unknown, migratedAt: Date): Task[] {
     throw new TaskMigrationError("A task document needs a tasks array.");
   }
 
-  if (value.version === 2) {
+  if (value.version === 2 || value.version === 3) {
     return value.tasks.map(taskFromV2);
   }
 

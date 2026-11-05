@@ -22,6 +22,8 @@ export function summarizeTasks(tasks: readonly Task[]): string[] {
         return `[open] ${task.title}`;
       case "done":
         return `[done ${task.state.completedAt.toISOString()}] ${task.title}`;
+      case "paused":
+        return `[paused: ${task.state.reason}] ${task.title}`;
     }
   });
 }

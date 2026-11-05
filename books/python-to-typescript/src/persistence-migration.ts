@@ -32,6 +32,13 @@ function parseState(value: unknown): TaskState {
       return { kind: "done", completedAt };
     }
   }
+  if (
+    value.kind === "paused" &&
+    typeof value.reason === "string" &&
+    value.reason.trim() !== ""
+  ) {
+    return { kind: "paused", reason: value.reason.trim() };
+  }
   throw new TaskMigrationError("A version 2 task has an invalid state.");
 }
 
@@ -53,7 +60,7 @@ export function migrateTaskDocument(value: unknown, migratedAt: Date): Task[] {
     throw new TaskMigrationError("A task document needs a tasks array.");
   }
 
-  if (value.version === 2) {
+  if (value.version === 2 || value.version === 3) {
     return value.tasks.map(taskFromV2);
   }
 

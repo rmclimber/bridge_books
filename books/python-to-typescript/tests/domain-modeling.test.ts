@@ -17,12 +17,19 @@ const tasks: readonly Task[] = [
     labels: ["book", "testing"],
     state: { kind: "done", completedAt: new Date("2026-11-04T00:00:00.000Z") },
   },
+  {
+    id: "t3",
+    title: "Wait for review",
+    labels: ["book"],
+    state: { kind: "paused", reason: "Awaiting editor" },
+  },
 ];
 
 test("a discriminated union narrows task state exhaustively", () => {
   assert.deepEqual(summarizeTasks(tasks), [
     "[open] Draft chapter",
     "[done 2026-11-04T00:00:00.000Z] Check examples",
+    "[paused: Awaiting editor] Wait for review",
   ]);
 });
 

@@ -50,9 +50,31 @@ test("a version 2 document keeps an explicit completion timestamp", () => {
   );
 });
 
+test("a version 3 document accepts a paused task only with a usable reason", () => {
+  const tasks = migrateTaskDocument(
+    {
+      version: 3,
+      tasks: [
+        { id: "t1", title: "Draft", labels: [], state: { kind: "paused", reason: " review " } },
+      ],
+    },
+    migratedAt,
+  );
+
+  assert.deepEqual(tasks[0]?.state, { kind: "paused", reason: "review" });
+  assert.throws(
+    () =>
+      migrateTaskDocument(
+        { version: 3, tasks: [{ id: "t1", title: "Draft", labels: [], state: { kind: "paused", reason: " " } }] },
+        migratedAt,
+      ),
+    TaskMigrationError,
+  );
+});
+
 test("an unsupported or malformed persisted document fails loudly", () => {
   assert.throws(
-    () => migrateTaskDocument({ version: 3, tasks: [] }, migratedAt),
+    () => migrateTaskDocument({ version: 4, tasks: [] }, migratedAt),
     TaskMigrationError,
   );
   assert.throws(

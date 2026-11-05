@@ -43,6 +43,13 @@ function parseState(value: unknown): TaskState {
       return { kind: "done", completedAt };
     }
   }
+  if (
+    value.kind === "paused" &&
+    typeof value.reason === "string" &&
+    value.reason.trim() !== ""
+  ) {
+    return { kind: "paused", reason: value.reason.trim() };
+  }
   throw new TypeError("A task state is invalid.");
 }
 

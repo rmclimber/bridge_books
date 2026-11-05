@@ -21,6 +21,12 @@ class MemoryFiles implements TextFiles {
   }
 }
 
+class FailingWriteFiles extends MemoryFiles {
+  override async write(_path: string, _contents: string): Promise<void> {
+    throw Object.assign(new Error("disk full"), { code: "ENOSPC" });
+  }
+}
+
 function harness(files = new MemoryFiles()) {
   const lines: string[] = [];
   return {
@@ -55,6 +61,7 @@ test("capstone accepts add, list, and complete commands end to end", async () =>
 test("capstone rejects invalid commands without overwriting task data", async () => {
   const capstone = harness();
   await assert.rejects(runTaskLedger(["add", "t1"], capstone.dependencies), /Usage/);
+  await assert.rejects(runTaskLedger(["add", " ", "Title"], capstone.dependencies), /Usage/);
   await assert.rejects(runTaskLedger(["complete", "missing"], capstone.dependencies), /not found/);
 
   await runTaskLedger(["add", "t1", "Write", "tests"], capstone.dependencies);
@@ -64,4 +71,40 @@ test("capstone rejects invalid commands without overwriting task data", async ()
   const saved = capstone.files.contents.get("tasks.json");
   assert.equal(saved?.includes("Write tests"), true);
   assert.equal(saved?.includes("Duplicate"), false);
+});
+
+// #region capstoneIncrements
+test(
+  "capstone delivers labels, filtered views, paused work, and a report in increments",
+  async () => {
+  const capstone = harness();
+  await runTaskLedger(["add", "t1", "Draft"], capstone.dependencies);
+  await runTaskLedger(["add", "t2", "Review"], capstone.dependencies);
+  await runTaskLedger(["label", "t1", "book"], capstone.dependencies);
+  await runTaskLedger(["label", "t1", "book"], capstone.dependencies);
+  await runTaskLedger(["pause", "t1", "Awaiting", "editor"], capstone.dependencies);
+
+  capstone.lines.length = 0;
+  await runTaskLedger(["list", "--label", "book"], capstone.dependencies);
+  assert.deepEqual(capstone.lines, ["[paused: Awaiting editor] Draft"]);
+
+  capstone.lines.length = 0;
+  await runTaskLedger(["report"], capstone.dependencies);
+  assert.deepEqual(capstone.lines, ["open: 1, paused: 1, done: 0"]);
+    await assert.rejects(runTaskLedger(["pause", "t1"], capstone.dependencies), /Usage/);
+  },
+);
+// #endregion capstoneIncrements
+
+test("a failed save never reports success or replaces known-good task data", async () => {
+  const files = new FailingWriteFiles();
+  files.contents.set(
+    "tasks.json",
+    JSON.stringify([{ id: "t1", title: "Draft", labels: [], state: { kind: "open" } }]),
+  );
+  const capstone = harness(files);
+
+  await assert.rejects(runTaskLedger(["pause", "t1", "Blocked"], capstone.dependencies), /Could not write/);
+  assert.deepEqual(capstone.lines, []);
+  assert.equal(files.contents.get("tasks.json")?.includes("paused"), false);
 });

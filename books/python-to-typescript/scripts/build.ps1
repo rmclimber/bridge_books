@@ -29,6 +29,9 @@ $sources = @(
   "exercises/11-test-boundaries.md",
   "exercises/12-repair-a-false-green-test.md",
   "manuscript/06-capstone-integration.md",
+  "manuscript/06-capstone-iterations.md",
+  "exercises/13-capstone-increments.md",
+  "exercises/14-capstone-failure-recovery.md",
   "manuscript/07-exit-assessment.md"
 )
 pandoc $sources --metadata-file=metadata.yaml --from markdown --pdf-engine=pdflatex --output (Join-Path $outputDir "python-to-typescript.pdf")
