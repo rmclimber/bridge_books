@@ -2,7 +2,7 @@
 
 | Priority | Competency | Python expectation | TypeScript reality | Category | Evidence | Planned location |
 | --- | --- | --- | --- | --- | --- | --- |
-| P0 | Validate external data safely | An annotation can validate a value | Types are erased; untrusted values are `unknown` until checked | False friend | Parser tests, Exercise 1, and capstone persistence import | Chapters 1 and 6 |
+| P0 | Validate external data safely | An annotation can validate a value | Types are erased; untrusted values are `unknown` until checked; nested inputs need an explicit fail-fast or aggregate error policy | False friend | Parser and recursive batch-validation tests, Exercises 1 and 15, and capstone persistence import | Chapters 1 and 6 |
 | P0 | Use `any` and `unknown` appropriately | `Any` is an unconstrained value | `any` removes checking; `unknown` requires narrowing | False friend | Exercise 1 explanation and parser tests | Chapter 1: Runtime boundaries |
 | P0 | Model absence | `None` is the absence value | `null`, `undefined`, omission, and falsiness differ | False friend | Exercise 2 and retry-policy tests | Chapter 2: Values that look familiar |
 | P0 | Model domain variants safely | State may be represented by loose flags or nullable fields | Discriminated unions make valid variants explicit and narrow by tag | New mechanism | Task-state tests and Exercise 3 | Chapter 3: Domain modeling |

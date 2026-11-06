@@ -82,16 +82,25 @@ Python-to-TypeScript transition is in progress.
   assessment with an independent priority migration, added legacy JSON fixture
   and learner checklist, expanded rubric examples and evaluator guidance, added
   final mental-model and further-study material, and recorded the matrix audit.
+- Completed D1, recursive validation and actionable error aggregation: a
+  checked nested task-batch parser returns typed, stable issue paths for every
+  independent defect, while preserving a fail-fast policy for unsafe outer
+  shapes. The implementation, tests, Exercise 15, worked solution, and
+  focused manuscript chapter provide the boundary-depth evidence without
+  introducing a schema library or framework. The PDF layout now places the
+  title before the table of contents and starts each top-level section on a
+  fresh page.
 
 ## In progress
 
-- D1 preparation: recursive validation and actionable error aggregation, as
-  specified in `POST_E7_DEPTH_PLAN.md`. Practitioner and learner review remain
-  the next external gate after the in-repository depth work.
+- Reassessing remaining competency gaps after D1, as required by
+  `POST_E7_DEPTH_PLAN.md`. Practitioner and learner review remain the next
+  external gate after the in-repository depth work.
 
 ## Next priorities
 
-1. Implement D1 from `POST_E7_DEPTH_PLAN.md`.
+1. Reassess remaining competency gaps and authorize another depth slice only
+   where evidence is still missing.
 2. Obtain practitioner and learner review of the integrated manuscript.
 3. Decide whether HTML/ePub and the workbook ship in the first release.
 
@@ -102,8 +111,9 @@ Python-to-TypeScript transition is in progress.
 
 ## Known issues / technical debt
 
-- The pilot is deliberately narrow; it does not yet cover schema libraries,
-  recursive validation, or error aggregation.
+- The runtime-boundary material intentionally does not cover schema libraries
+  or a generic validation framework; D1 covers the concrete recursive and
+  aggregate-validation case needed by the book.
 - The manuscript and workbook remain foundations, not
   release-ready artifacts. The approved targets remain 52--64 and 25--35
   pages respectively; see `EXPANSION_PLAN.md`.
@@ -130,10 +140,10 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-05 (visual PDF inspection passed; 39 pages)
-- Workbook build: passed, 2026-11-05 (visual PDF inspection passed; 25 pages)
-- Repository checks: passed, 2026-11-05 (type-check, 20 synchronized snippets,
-  and 39 Node tests)
+- Main build: passed, 2026-11-05 (visual PDF inspection passed; 55 pages)
+- Workbook build: passed, 2026-11-05 (visual PDF inspection passed; 26 pages)
+- Repository checks: passed, 2026-11-05 (type-check, 21 synchronized snippets,
+  and 41 Node tests)
 - Release status: unreleased; foundation validated, expansion required before
   external review or release.
 

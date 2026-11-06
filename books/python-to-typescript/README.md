@@ -6,8 +6,8 @@ strict TypeScript in a Node.js professional workflow.
 ## Status
 
 The repository contains a validated foundation plus seven competency-driven
-expansion slices, capstone integration, and an exit-assessment seed. It is not
-yet the planned book-length transition.
+expansion slices, a recursive-validation depth slice, capstone integration, and
+an exit-assessment seed. It is not yet the planned book-length transition.
 The current material covers runtime boundaries; absence, equality, numeric
 limits, and mutation; domain modeling with unions, collections, generics, and
 structural typing; plus Node ESM modules, focused functions/classes, and
@@ -15,6 +15,7 @@ structural typing; plus Node ESM modules, focused functions/classes, and
 and tests; plus async control flow, migration, test boundaries, debugging, and
 maintainable-change workflow; plus incremental capstone changes for labels,
 filtered views, paused-state compatibility, failure behavior, and reporting.
+It also covers recursive batch validation with stable, actionable error paths.
 The final assessment now asks for an independent priority migration rather than
 repeating a guided capstone change.
 
