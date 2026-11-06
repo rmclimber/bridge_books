@@ -1,8 +1,7 @@
 # Post-E7 depth plan
 
-The planned E1--E7 sequence is complete. The manuscript remains below the
-52--64-page planning range, but further work must close demonstrated gaps rather
-than fill pages. This plan authorizes the following framework-free depth slice.
+The planned E1--E7 sequence is complete. Depth slices address demonstrated
+gaps in the framework-free transition. Page estimates are planning guides.
 
 ## D1 -- Recursive validation and actionable error aggregation
 
@@ -24,4 +23,17 @@ tests; one learner exercise with worked solution; matrix evidence for nested
 untrusted data and error reporting; repository checks, both PDF builds, and
 visual inspection.
 
-After D1, reassess actual competency gaps before authoring another depth slice.
+## D2 -- Deriving types for API boundaries
+
+**Gap:** The book introduces generic constraints and uses indexed access in
+the task view. Learners need practice deriving a narrow API contract and
+distinguishing static assignability from runtime field selection.
+
+**Evidence:** A Python dictionary projection compared with the TypeScript
+task view, a contract derived with `Pick` and indexed access, and checks for
+compiler diagnostics and exact runtime output. Exercise 16 asks for a related
+projection. Its worked solution is checked TypeScript with a synchronized
+workbook excerpt.
+
+After D2, use practitioner and learner review to assess whether the async
+chapter needs an applied cancellation example.

@@ -10,6 +10,7 @@ $sources = @(
   "solutions/18-recursive-validation.md",
   "solutions/02-values-that-look-familiar.md",
   "solutions/03-domain-modeling.md",
+  "solutions/19-derived-api-types.md",
   "solutions/04-program-structure.md",
   "solutions/05-async-persistence.md",
   "solutions/07-static-model-map.md",

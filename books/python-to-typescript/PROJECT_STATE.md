@@ -2,9 +2,9 @@
 
 ## Current phase
 
-The validated foundation is complete, but the book is materially below its
-approved length and competency depth. Expansion toward the intended full
-Python-to-TypeScript transition is in progress.
+The integrated draft includes E1--E7 and the D1 and D2 depth slices.
+Practitioner and learner review are the next gates for the framework-free
+Python-to-TypeScript transition.
 
 ## Completed
 
@@ -90,18 +90,21 @@ Python-to-TypeScript transition is in progress.
   introducing a schema library or framework. The PDF layout now places the
   title before the table of contents and starts each top-level section on a
   fresh page.
+- Completed D2, deriving types for API boundaries. A Python dictionary
+  projection introduces `Pick`, indexed access, and explicit runtime
+  field selection in the TypeScript task view. Exercise 16 and its executable
+  badge solution have compiler and runtime checks.
 
 ## In progress
 
-- Reassessing remaining competency gaps after D1, as required by
-  `POST_E7_DEPTH_PLAN.md`. Practitioner and learner review remain the next
-  external gate after the in-repository depth work.
+- The integrated draft is paused pending practitioner and learner feedback.
+  `REVIEW_BRIEF.md` contains the reviewer tasks and the cancellation prompt.
 
 ## Next priorities
 
-1. Reassess remaining competency gaps and authorize another depth slice only
-   where evidence is still missing.
-2. Obtain practitioner and learner review of the integrated manuscript.
+1. Obtain practitioner and learner review of the integrated manuscript.
+2. Use review evidence to prioritize revisions, including whether to add an
+   applied cancellation example.
 3. Decide whether HTML/ePub and the workbook ship in the first release.
 
 ## Open decisions
@@ -114,9 +117,8 @@ Python-to-TypeScript transition is in progress.
 - The runtime-boundary material intentionally does not cover schema libraries
   or a generic validation framework; D1 covers the concrete recursive and
   aggregate-validation case needed by the book.
-- The manuscript and workbook remain foundations, not
-  release-ready artifacts. The approved targets remain 52--64 and 25--35
-  pages respectively; see `EXPANSION_PLAN.md`.
+- The integrated manuscript and workbook are within their planning ranges.
+  Release readiness still depends on review.
 - In this managed Windows environment, dependency installation requires the
   Windows system CA store and must bypass injected offline/proxy variables.
 
@@ -126,8 +128,9 @@ Python-to-TypeScript transition is in progress.
 - Markdown is canonical; generated artifacts belong in `output/`.
 - Examples and assessments must be independently executable where practical.
 - The core book excludes framework specialization.
-- Manuscript excerpts marked `<!-- snippet: ... -->` must match their tagged
-  executable source region; `pnpm run verify:snippets` enforces this.
+- Manuscript and workbook excerpts marked `<!-- snippet: ... -->` must match
+  their tagged executable source region. `pnpm run verify:snippets` enforces
+  this.
 - The early chapters use compact prose with one substantial checked example and
   one exercise each; retain this clarity, but expand missing competencies with
   additional evidence rather than treating this early-chapter convention as a
@@ -140,10 +143,9 @@ Python-to-TypeScript transition is in progress.
 
 ## Last validated state
 
-- Main build: passed, 2026-11-05 (visual PDF inspection passed; 55 pages)
+- Main build: passed, 2026-11-05 (visual PDF inspection passed; 57 pages)
 - Workbook build: passed, 2026-11-05 (visual PDF inspection passed; 26 pages)
-- Repository checks: passed, 2026-11-05 (type-check, 21 synchronized snippets,
-  and 41 Node tests)
-- Release status: unreleased; foundation validated, expansion required before
-  external review or release.
+- Repository checks: passed, 2026-11-05 (type-check, 23 synchronized snippets,
+  and 43 Node tests)
+- Release status: unreleased, with external review pending.
 

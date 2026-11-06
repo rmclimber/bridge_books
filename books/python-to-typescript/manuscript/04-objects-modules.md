@@ -61,21 +61,11 @@ A module-level function is the default for an operation that needs only
 explicit inputs. It is easier to test, has no receiver to lose, and makes its
 dependencies visible in its parameter list and imports. The query module below
 accepts trusted `Task` values and returns a presentation-friendly
-structural view. It neither mutates a task nor knows how the view will be
-rendered.
+structural view using `toTaskView` from the API boundaries chapter. It neither
+mutates a task nor knows how the view will be rendered.
 
 <!-- snippet: src/task-views.ts#selectOpenViews -->
 ```ts
-export type TaskView = {
-  id: string;
-  title: string;
-  state: Task["state"]["kind"];
-};
-
-export function toTaskView(task: Task): TaskView {
-  return { id: task.id, title: task.title, state: task.state.kind };
-}
-
 export function selectOpenViews(tasks: readonly Task[]): TaskView[] {
   return tasks
     .filter((task) => task.state.kind === "open")

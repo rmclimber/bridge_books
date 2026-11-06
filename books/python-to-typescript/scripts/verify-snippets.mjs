@@ -47,6 +47,16 @@ const checks = [
     region: "summarizeTasks",
   },
   {
+    manuscript: "manuscript/03-derived-api-types.md",
+    source: "src/task-views.ts",
+    region: "taskView",
+  },
+  {
+    manuscript: "solutions/19-derived-api-types.md",
+    source: "solutions/19-derived-api-types.ts",
+    region: "taskBadge",
+  },
+  {
     manuscript: "manuscript/04-program-structure.md",
     source: "src/task-presentation.ts",
     region: "openTaskTitles",
@@ -129,4 +139,4 @@ for (const check of checks) {
   }
 }
 
-console.log(`Verified ${checks.length} manuscript snippet source(s).`);
+console.log(`Verified ${checks.length} marked snippet source(s).`);

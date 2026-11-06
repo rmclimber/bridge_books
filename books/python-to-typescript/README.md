@@ -6,8 +6,8 @@ strict TypeScript in a Node.js professional workflow.
 ## Status
 
 The repository contains a validated foundation plus seven competency-driven
-expansion slices, a recursive-validation depth slice, capstone integration, and
-an exit-assessment seed. It is not yet the planned book-length transition.
+expansion slices, two depth slices, capstone integration, and an independent
+exit assessment. The integrated draft is awaiting practitioner and learner review.
 The current material covers runtime boundaries; absence, equality, numeric
 limits, and mutation; domain modeling with unions, collections, generics, and
 structural typing; plus Node ESM modules, focused functions/classes, and
@@ -15,7 +15,8 @@ structural typing; plus Node ESM modules, focused functions/classes, and
 and tests; plus async control flow, migration, test boundaries, debugging, and
 maintainable-change workflow; plus incremental capstone changes for labels,
 filtered views, paused-state compatibility, failure behavior, and reporting.
-It also covers recursive batch validation with stable, actionable error paths.
+It also covers recursive batch validation with actionable error paths and
+derived API types with explicit runtime field selection.
 The final assessment now asks for an independent priority migration rather than
 repeating a guided capstone change.
 
@@ -24,9 +25,8 @@ The `task-ledger` capstone integrates those modules behind `list`, `add`,
 The independent final assessment and scoring rubric are in
 `assessments/exit-assessment.md`.
 
-`EXPANSION_PLAN.md` is the authoritative roadmap for the remaining
-competency-driven expansion to the 52--64-page manuscript and 25--35-page
-workbook targets.
+Use [the review brief](REVIEW_BRIEF.md) for the practitioner and learner
+handoff. `EXPANSION_PLAN.md` records the expansion roadmap and page estimates.
 
 ## Commands
 

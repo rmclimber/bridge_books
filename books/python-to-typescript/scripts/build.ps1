@@ -18,6 +18,8 @@ $sources = @(
   "exercises/07-function-api-design.md",
   "manuscript/03-domain-modeling.md",
   "exercises/03-domain-modeling.md",
+  "manuscript/03-derived-api-types.md",
+  "exercises/16-derived-api-types.md",
   "manuscript/04-program-structure.md",
   "exercises/04-program-structure.md",
   "manuscript/04-objects-modules.md",
