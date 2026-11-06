@@ -7,6 +7,7 @@ New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
 $sources = @(
   "workbook/book.md",
   "solutions/01-runtime-boundaries.md",
+  "solutions/18-recursive-validation.md",
   "solutions/02-values-that-look-familiar.md",
   "solutions/03-domain-modeling.md",
   "solutions/04-program-structure.md",

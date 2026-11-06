@@ -1,5 +1,3 @@
-# Python to TypeScript
-
 ## About this guide
 
 This concise, practice-driven bridge is for experienced Python programmers who

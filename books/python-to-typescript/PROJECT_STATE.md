@@ -85,12 +85,14 @@ Python-to-TypeScript transition is in progress.
 
 ## In progress
 
-- Preparing practitioner and learner review for the integrated manuscript.
+- D1 preparation: recursive validation and actionable error aggregation, as
+  specified in `POST_E7_DEPTH_PLAN.md`. Practitioner and learner review remain
+  the next external gate after the in-repository depth work.
 
 ## Next priorities
 
-1. Obtain practitioner and learner review of the integrated manuscript.
-2. Address review findings and assess remaining page-budget gaps by competency.
+1. Implement D1 from `POST_E7_DEPTH_PLAN.md`.
+2. Obtain practitioner and learner review of the integrated manuscript.
 3. Decide whether HTML/ePub and the workbook ship in the first release.
 
 ## Open decisions

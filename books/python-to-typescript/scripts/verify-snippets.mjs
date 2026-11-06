@@ -17,6 +17,11 @@ const checks = [
     region: "parseTaskDraft",
   },
   {
+    manuscript: "manuscript/01-recursive-validation.md",
+    source: "src/runtime-boundary.ts",
+    region: "validateTaskBatch",
+  },
+  {
     manuscript: "manuscript/02-values-that-look-familiar.md",
     source: "src/value-pitfalls.ts",
     region: "chooseRetryLimit",

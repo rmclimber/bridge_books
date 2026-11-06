@@ -10,6 +10,8 @@ $sources = @(
   "exercises/06-static-model-map.md",
   "manuscript/01-runtime-boundaries.md",
   "exercises/01-runtime-boundaries.md",
+  "manuscript/01-recursive-validation.md",
+  "exercises/15-recursive-validation.md",
   "manuscript/02-values-that-look-familiar.md",
   "exercises/02-values-that-look-familiar.md",
   "manuscript/03-function-api-design.md",
